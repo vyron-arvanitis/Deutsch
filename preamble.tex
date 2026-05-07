@@ -1,0 +1,73 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman,english]{babel}
+\usepackage{booktabs}
+
+\usepackage[a4paper,margin=2.4cm]{geometry}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{csquotes}
+
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    urlcolor=blue!50!black
+}
+
+\setlist[itemize]{noitemsep, topsep=2pt}
+\setlist[enumerate]{noitemsep, topsep=2pt}
+
+\titleformat{\section}
+    {\Large\bfseries}
+    {\thesection}
+    {1em}
+    {}
+
+\titleformat{\subsection}
+    {\large\bfseries}
+    {\thesubsection}
+    {1em}
+    {}
+
+\titleformat{\subsubsection}
+    {\normalsize\bfseries}
+    {\thesubsubsection}
+    {1em}
+    {}
+
+% Vocabulary table row
+\newcommand{\deword}[3]{\textbf{#1} & #2 & #3 \\\midrule}
+
+% Correction macros
+\newcommand{\wrong}[1]{\textcolor{red!70!black}{\sout{#1}}}
+\newcommand{\correct}[1]{\textcolor{green!50!black}{#1}}
+
+% Vocabulary table environment
+\newenvironment{vocabtable}{
+\begin{longtable}{p{0.25\textwidth}p{0.30\textwidth}p{0.37\textwidth}}
+\toprule
+\textbf{German} & \textbf{Meaning / Note} & \textbf{Example} \\
+\midrule
+\endhead
+}{
+\bottomrule
+\end{longtable}
+}
+
+\newenvironment{correctionblock}{
+\begin{quote}
+\small
+}{
+\end{quote}
+}
+
